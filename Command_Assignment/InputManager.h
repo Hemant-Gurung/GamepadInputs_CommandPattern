@@ -34,33 +34,38 @@ namespace dae
 
 	};
 
-	class InputManager final:public Singleton<InputManager>
+	class InputManager final
 	{
+		class InputManagetImpl;
+		InputManagetImpl* pImpl;
 	public:
 		InputManager();
+		~InputManager();
+
 		void Update();
 		void ProcessInput();
 		void HandleInput();
-		bool IsPressed(ControllerButton button) const;
 
-		bool IsDownThisFrame(unsigned int button) const;
-		bool IsUpThisFrame(unsigned int button) const;
+		bool IsDown(unsigned int button) const;
+		bool IsUp(unsigned int button) const;
 		bool IsPressed(unsigned int button) const;
 
 	private:
-		XINPUT_STATE m_CurrentState{};
+		/*XINPUT_STATE m_CurrentState{};
 		XINPUT_STATE m_PreviousState{};
 		XINPUT_KEYSTROKE m_CurrentKeyStroke{};
 		WORD buttonPressedThisFrame;
-		WORD buttonReleasedThisFrame;
+		WORD buttonReleasedThisFrame;*/
 
-		
-		int _controllerIndex;
-		//XINPUT_KEYSTROKE m_CurrentKeyStroke;
+		//
+		//int _controllerIndex;
+		////XINPUT_KEYSTROKE m_CurrentKeyStroke;
 		std::unique_ptr<Command> m_ButtonA{};
 		std::unique_ptr<Command> m_ButtonB{};
 		std::unique_ptr<Command> m_ButtonRightShoulder{};
 		std::unique_ptr<Command> m_ButtonY{};
+
+		
 	};
 
 
