@@ -13,7 +13,7 @@ public:
 class JumpCommand: public Command
 {
 public:
-	void  Execute() override { std::cout << "Jumping/n"; };
+	void  Execute() override { std::cout << "Jumping\n"; };
 };
 
 //FireGun 
@@ -21,7 +21,7 @@ public:
 class FireGunCommand : public Command
 {
 public:
-	void  Execute() override { std::cout << "Firing Gun/n"; }
+	void  Execute() override { std::cout << "Firing Gun\n"; }
 };
 
 //Duck
@@ -29,7 +29,7 @@ public:
 class DuckCommand : public Command
 {
 public:
-	void  Execute() override { std::cout << "Ducking/n"; }
+	void  Execute() override { std::cout << "Ducking\n"; }
 };
 
 //Fart
@@ -37,5 +37,5 @@ public:
 class FartCommand : public Command
 {
 public:
-	void  Execute() override { std::cout << "Farting /n"; }
+	void  Execute() override { std::cout << "Farting \n"; }
 };

@@ -54,6 +54,7 @@ namespace dae
 		WORD buttonPressedThisFrame;
 		WORD buttonReleasedThisFrame;
 
+		
 		int _controllerIndex;
 		//XINPUT_KEYSTROKE m_CurrentKeyStroke;
 		std::unique_ptr<Command> m_ButtonA{};

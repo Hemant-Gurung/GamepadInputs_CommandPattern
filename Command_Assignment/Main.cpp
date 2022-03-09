@@ -41,7 +41,8 @@ int main()
 		//	std::cout << "Button LEFT SHOULDER has been pressed" << std::endl;
 		//else if (inputManager.IsPressed(ControllerButton::ButtonRightShoulder))
 		//	std::cout << "Button RIGHT SHOULDER has been pressed" << std::endl;
-		 if (inputManager.IsPressed(ControllerButton::ButtonX))
+		
+		 if (inputManager.IsPressed((int)ControllerButton::ButtonX))
 		{
 			std::cout << "Button X has been pressed" << std::endl;
 			break;
